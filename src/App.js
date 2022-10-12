@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <img
+      {/* <img
         src="https://live.staticflickr.com/65535/52420958302_004734700a_o.jpg"
         width="450"
         height="800"
@@ -25,9 +25,11 @@ function App() {
       <img
         src="https://live.staticflickr.com/65535/52421803649_f8f3f089fa_c.jpg"
         width="800"
-        height="600"
         alt="IMG-20221011-WA0010"
-      />
+      /> */}
+      <h2>Leila Al-Hemali</h2>
+      <h3>Studio Potter</h3>
+      <h3>Full-Stack Engineer</h3>
     </div>
   );
 }
