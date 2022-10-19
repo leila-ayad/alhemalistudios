@@ -19,14 +19,14 @@ export default function OpenRoad() {
         src="https://live.staticflickr.com/65535/52438103046_28eef9c655_z.jpg"
         width="640"
         height="640"
-        alt="winetumblers"
+        alt="a set of 6 wine tumblers with mountain designs"
       ></img>
       <img
         className="square-image"
         src="https://live.staticflickr.com/65535/52438102851_5b403677dd_z.jpg"
         width="640"
         height="640"
-        alt="at_wheel"
+        alt="Leila applying slip at her potter's wheel"
       ></img>
 
       <img
@@ -34,14 +34,14 @@ export default function OpenRoad() {
         src="https://live.staticflickr.com/65535/52437597787_b24394c115_z.jpg"
         width="640"
         height="640"
-        alt="moutainmugs"
+        alt="a pair of blue moutain mugs"
       ></img>
       <img
         className="square-image"
         src="https://live.staticflickr.com/65535/52438625838_3dd60abb34_z.jpg"
         width="640"
         height="640"
-        alt="potterysale"
+        alt="Leila displaying open road work at a pottery sale"
       ></img>
     </div>
   );

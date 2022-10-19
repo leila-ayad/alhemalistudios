@@ -37,8 +37,8 @@
 }
 
 .project-text-container {
-    margin: auto; 
-    width: 50%
+  margin: auto;
+  width: 50%;
 }
 
 .project-text {
@@ -46,10 +46,10 @@
   line-height: 2rem;
 }
 
-/* NavBar Styling */ 
+/* NavBar Styling */
 
 p {
-  color: black
+  color: black;
 }
 
 h4 {
@@ -98,7 +98,7 @@ h5 {
 }
 
 .drop-button:hover {
-  color: #2E382E;
+  color: #2e382e;
 }
 
 .drop-button .nav-link {
@@ -151,7 +151,6 @@ h5 {
   color: black;
 }
 
-
 /* Landing Page */
 
 .landing-page-container {
@@ -178,7 +177,6 @@ h5 {
   height: 400px;
   width: 400px;
   transition: visibility 0s, opacity 0.3s;
-
 }
 
 .project-container:hover .project-title {
@@ -186,7 +184,6 @@ h5 {
   display: block;
   opacity: 0.9;
 }
-
 
 .project-link {
   margin-top: -10px;
@@ -230,4 +227,112 @@ h5 {
   margin-right: 20px;
   color: black;
 }
+
+.mobile-nav {
+  display: none;
+}
 /* put a super discreet gradient in the background */
+
+@media (max-width: 1000px) {
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+
+  .App {
+    margin: 3% 5%;
+  }
+
+  .nav-container {
+    display: none;
+    margin: 5%;
+  }
+
+  .mobile-nav {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+  }
+
+  .mobile-nav-closed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .left-side-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+ 
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 0.5rem;
+  }
+
+  .mobile-nav-open {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+  }
+
+  .close-icon{ 
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .right-side-nav {
+    
+  }
+
+  .nav-section {
+    margin-top: 2%;
+    padding: 5px;
+    color: #acafac;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+  }
+
+ 
+
+  .nav-link:hover {
+    color: black;
+  }
+  .landing-page-container {
+    margin-top: 20px;
+  }
+
+  .project-text-container {
+    width: 90%;
+  }
+
+  .project-text {
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .info-div {
+    width: 100%
+  }
+
+  .social-media-container {
+    width: 100%;
+    justify-content: center;
+  }
+}
