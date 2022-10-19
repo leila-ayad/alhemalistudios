@@ -32,12 +32,24 @@
 
 .square-image {
   margin: 10px;
+  height: 400px;
+  width: 400px;
+}
+
+.project-text-container {
+    margin: auto; 
+    width: 50%
+}
+
+.project-text {
+  text-align: left;
+  line-height: 2rem;
 }
 
 /* NavBar Styling */ 
 
 p {
-  color: #2E382E
+  color: black
 }
 
 h4 {
@@ -146,6 +158,7 @@ h5 {
   margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project-container {
@@ -161,9 +174,9 @@ h5 {
   left: 0;
   z-index: 99;
   margin: 10px;
-  background-color: #89b288;
-  height: 640px;
-  width: 640px;
+  background-color: #e9a447;
+  height: 400px;
+  width: 400px;
   transition: visibility 0s, opacity 0.3s;
 
 }
@@ -182,7 +195,7 @@ h5 {
   font-family: "Chivo", sans-serif;
   font-weight: 700;
   text-decoration: none;
-  color: #FAFFFF;
+  color: white;
   font-size: 65px;
   position: absolute;
   left: 50%;
