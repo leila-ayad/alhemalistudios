@@ -1,6 +1,6 @@
 export default function OpenRoad() {
   return (
-    <div>
+    <div className="project-container">
       <h1>Open Road Pottery</h1>
       <div className="project-text-container">
         <p className="project-text">

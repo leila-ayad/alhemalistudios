@@ -19,7 +19,7 @@ export default function MobileNavBar() {
             Info
           </Link>
           <div>
-            <Link className="nav-section" to={"/"}>
+            <Link className="nav-section" to={"/"} onClick={toggleOpen}>
               Projects
             </Link>
             <div className="nav-links">

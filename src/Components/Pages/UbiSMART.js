@@ -1,6 +1,6 @@
 export default function UbiSMART() {
   return (
-    <div>
+    <div className="project-container">
       <h1>UbiSMART</h1>
       <div className="project-text-container">
         <p className="project-text">

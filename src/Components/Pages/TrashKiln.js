@@ -1,6 +1,6 @@
 export default function TrashKiln() {
   return (
-    <div>
+    <div className="project-container">
       <h1>Trash Kiln</h1>
       <br></br>
       <div className="project-text-container">
