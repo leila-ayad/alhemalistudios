@@ -17,18 +17,10 @@ export default function TrashKiln() {
       </div>
       <img
         className="square-image"
-        src="https://live.staticflickr.com/65535/52421917060_e3084b80e4_z.jpg"
+        src="https://live.staticflickr.com/65535/52438519680_2296d3ce9d_z.jpg"
         width="640"
         height="640"
-        alt="20210528_154041"
-      />
-      ;
-      <img
-        className="square-image"
-        src="https://live.staticflickr.com/65535/52420958302_68ef9b1207_z.jpg"
-        width="640"
-        height="640"
-        alt="20210528_154215"
+        alt="raku madness"
       ></img>
       ;
       <img
@@ -36,31 +28,38 @@ export default function TrashKiln() {
         src="https://live.staticflickr.com/65535/52438512350_72136738ce_z.jpg"
         width="640"
         height="640"
-        alt="20210528_151446"
+        alt="small round jar with smoke patterns"
       ></img>
-      ;
       <img
         className="square-image"
-        src="https://live.staticflickr.com/65535/52421803649_83010f032d_z.jpg"
+        src="https://live.staticflickr.com/65535/52421917060_e3084b80e4_z.jpg"
         width="640"
         height="640"
-        alt="IMG-20221011-WA0010"
-      ></img>
+        alt="close up of smoke fired raku piece"
+      />
       ;
       <img
         className="square-image"
         src="https://live.staticflickr.com/65535/52438337754_05332c0f14_z.jpg"
         width="640"
         height="640"
-        alt="copperreduction"
+        alt="copper reduction"
       ></img>
       ;
       <img
         className="square-image"
-        src="https://live.staticflickr.com/65535/52438519680_2296d3ce9d_z.jpg"
+        src="https://live.staticflickr.com/65535/52420958302_68ef9b1207_z.jpg"
         width="640"
         height="640"
-        alt="rakumadness"
+        alt="ceramic vessels splintered by the thermal shock of the raku firing process"
+      ></img>
+      ; ;
+      <img
+        className="square-image"
+        src="https://live.staticflickr.com/65535/52421803649_83010f032d_z.jpg"
+        width="640"
+        height="640"
+        alt="Leila adjusting the trash kiln"
       ></img>
       ;
       <img
@@ -68,7 +67,7 @@ export default function TrashKiln() {
         src="https://live.staticflickr.com/65535/52438062476_1ca1b2d35d_z.jpg"
         width="640"
         height="640"
-        alt="rakupot"
+        alt="raku kiva incense burner"
       ></img>
     </div>
   );

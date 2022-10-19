@@ -25,20 +25,7 @@ export default function LandingPage() {
           alt="UbiSMART Home Page"
         ></img>
         <Link className="project-title" to={"/ubismart"}>
-          <p className="project-link" >UbiSMART</p>
-        </Link>
-      </div>
-
-      <div className="project-container">
-        <img
-          className="square-image"
-          src="https://live.staticflickr.com/65535/52438103046_28eef9c655_z.jpg"
-          width="640"
-          height="640"
-          alt="winetumblers"
-        ></img>
-       <Link className="project-title" to={"openroadpottery"}>
-          <p className="project-link">Open Road Pottery</p>
+          <p className="project-link">UbiSMART</p>
         </Link>
       </div>
 
@@ -52,6 +39,19 @@ export default function LandingPage() {
         ></img>
         <Link className="project-title" to={"/materialslibrary"}>
           <p className="project-link">Abstract Picnic Material's Library</p>
+        </Link>
+      </div>
+
+      <div className="project-container">
+        <img
+          className="square-image"
+          src="https://live.staticflickr.com/65535/52438103046_28eef9c655_z.jpg"
+          width="640"
+          height="640"
+          alt="winetumblers"
+        ></img>
+        <Link className="project-title" to={"openroadpottery"}>
+          <p className="project-link">Open Road Pottery</p>
         </Link>
       </div>
     </div>
