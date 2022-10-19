@@ -1,13 +1,6 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import {GrCaretDown } from "react-icons/gr"
 
 export default function NavBar() {
-  const [show, setShow] = useState(false);
-
-  const showDropDown = () => {
-    setShow(!show);
-  };
 
   return (
     <div className="nav-container">
@@ -16,38 +9,48 @@ export default function NavBar() {
         <h5>Clay & Coding</h5>
       </Link>
       <div className="right-side-nav">
-        <Link className="nav-element" to={"info"}>
-          Info
-        </Link>
         <div className="drop-container">
           <button className="drop-button">
-            {" "}
-            <Link className="nav-element" to={"ceramics"}>
-              Ceramics 
-              <GrCaretDown className="nav-element"/>
+            <Link className="nav-link" to={"info"}>
+              Info
             </Link>
           </button>
           <div className="drop-content">
-            <Link className="nav-element" to={"trashkiln"}>
+            <div className="nav-link">
+            </div>
+            <div className="nav-link">
+            </div>{" "}
+          </div>
+        </div>
+
+        <div className="drop-container">
+          <button className="drop-button">
+            {" "}
+            <p className="nav-link">
+              Ceramics
+            </p>
+          </button>
+          <div className="drop-content">
+            <Link className="nav-link" to={"trashkiln"}>
               Trash Kiln
             </Link>
-            <Link className="nav-element" to={"openroadpottery"}>
+            <Link className="nav-link" to={"openroadpottery"}>
               Open Road Pottery
             </Link>{" "}
           </div>
         </div>
         <div className="drop-container">
           <button className="drop-button">
-            <Link className="nav-element" to={"programming"}>
+            <p className="nav-link">
               Programming
-            </Link>
-            <GrCaretDown className="nav-element"/>
+            </p>
+            {/* <GrCaretDown className="nav-link" /> */}
           </button>
           <div className="drop-content">
-            <Link className="nav-element" to={"materialslibrary"}>
+            <Link className="nav-link" to={"materialslibrary"}>
               Materials Library
             </Link>
-            <Link className="nav-element" to={"UbiSMART"}>
+            <Link className="nav-link" to={"UbiSMART"}>
               UbiSMART
             </Link>
           </div>

@@ -1,16 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo&family=Lobster+Two:wght@700&display=swap");
 .App {
   text-align: center;
+  margin: 130px;
 }
+
+/* tumeric color   color: #e9a447; */
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -28,104 +26,195 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* {
+  font-family: "Chivo", sans-serif;
 }
 
-/* NavBar Styling */
+.square-image {
+  margin: 10px;
+}
+
+/* NavBar Styling */ 
+
+p {
+  color: #2E382E
+}
 
 h4 {
+  display: flex;
+  font-size: 50px;
   margin: 2px;
+  margin-bottom: 20px;
+  color: #89b288;
+  letter-spacing: 1.3px;
+  font-family: "Lobster Two", cursive;
 }
 
 h5 {
+  font-size: 16px;
+  display: flex;
   margin: 2px;
+  color: #acafac;
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
   margin: 2px;
   margin-top: 2%;
-  border: 2px solid black;
 }
 
 .left-side-nav {
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
+  text-decoration: none;
 }
 
 .right-side-nav {
   display: flex;
-  border: 2px solid black;
 }
 
-.ceramics-container {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid black;
+.drop-container {
+  transition: visibility 0s, opacity 0.3s linear;
 }
 
 .drop-button {
-  margin: 2px;
-  background-color: #f9f9f9;
+  display: flex;
+  background-color: white;
   border: none;
   text-decoration: none;
-  color: black;
 }
 
-.drop-button .nav-element {
-  font-size: 16px;
+.drop-button:hover {
+  color: #2E382E;
+}
+
+.drop-button .nav-link {
+  font-size: 20px;
   border: none;
   outline: none;
-  color: black;
-  padding: 14px 16px;
-}
-
-.drop-container:hover .drop-button {
-  background-color: red;
+  color: #acafac;
+  padding: 14px 0px;
+  transition: color 0.1s ease-in;
 }
 
 .drop-content {
-  display: none;
-  background-color: #f9f9f9;
+  visibility: hidden;
+  opacity: 0;
+  background-color: white;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   margin: 2px;
   text-decoration: none;
-  color: black;
-  border: 2px solid black;
+  color: #acafac;
 }
 
-.drop-content .nav-element {
+.drop-container:hover .drop-content {
+  visibility: visible;
+  flex-direction: column;
+  opacity: 1;
+}
+
+.drop-content .nav-link {
   float: none;
-  color: black;
-  padding: 12px 16px;
+  color: #acafac;
+  padding: 12px 0px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
-.drop-content .nav-element:hover {
-  background-color: #ddd;
+.drop-content .nav-link:hover {
+  color: black;
 }
 
-.drop-container:hover .drop-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.nav-element {
+.nav-link {
   margin: 2px;
   text-decoration: none;
+  color: #acafac;
+  font-family: "Chivo", sans-serif;
+}
+
+.nav-link:hover {
   color: black;
 }
 
 
+/* Landing Page */
+
+.landing-page-container {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-container {
+  position: relative;
+  display: inline-block;
+}
+
+.project-container .project-title {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  margin: 10px;
+  background-color: #89b288;
+  height: 640px;
+  width: 640px;
+  transition: visibility 0s, opacity 0.3s;
+
+}
+
+.project-container:hover .project-title {
+  visibility: visible;
+  display: block;
+  opacity: 0.9;
+}
+
+
+.project-link {
+  margin-top: -10px;
+  display: inline;
+  opacity: 1;
+  font-family: "Chivo", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #FAFFFF;
+  font-size: 65px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+/* Info Page  */
+
+.info-div {
+  width: 50%;
+  text-align: left;
+}
+
+.info-cover-photo {
+  margin-bottom: 3%;
+}
+
+/* Footer */
+
+.social-media-container {
+  margin-top: 20px;
+  display: flex;
+  flex: row;
+  color: black;
+  height: 20px;
+  width: 20px;
+}
+
+.social-media-logo {
+  margin-top: 80px;
+  margin-right: 20px;
+  color: black;
+}
 /* put a super discreet gradient in the background */

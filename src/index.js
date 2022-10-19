@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import ErrorPage from "./Components/Pages/ErrorPage";
+import LandingPage from "./Components/Pages/LandingPage";
 import Info from "./Components/Pages/Info";
 
 import Ceramics from "./Components/Pages/Ceramics";
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: "/",
+        element: <LandingPage />
+      },
       {
         path: "info",
         element: <Info />,
