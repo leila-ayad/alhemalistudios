@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 export default function LandingPage() {
   return (
     <div className="landing-page-container">
+    <p>Does the site deploy when I push changes?</p>
       <div className="project-container">
         <img
           className="square-image"
