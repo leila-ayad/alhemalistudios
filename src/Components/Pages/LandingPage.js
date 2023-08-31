@@ -3,7 +3,18 @@ import { Link } from "react-router-dom";
 export default function LandingPage() {
   return (
     <div className="landing-page-container">
-    <p>Does the site deploy when I push changes?</p>
+      <div className="project-container">
+        <img
+          className="square-image"
+          src="https://live.staticflickr.com/65535/53155501134_22f366ebf6_z.jpg"
+          width="640"
+          height="640"
+          alt="A carafe, pour over and two mugs from the urchinware line"
+        ></img>
+        <Link className="project-title" to={"/urchinware"}>
+          <p className="project-link">Urchinware</p>
+        </Link>
+      </div>
       <div className="project-container">
         <img
           className="square-image"
@@ -29,7 +40,6 @@ export default function LandingPage() {
           <p className="project-link">UbiSMART</p>
         </Link>
       </div>
-
       <div className="project-container">
         <img
           className="square-image"
