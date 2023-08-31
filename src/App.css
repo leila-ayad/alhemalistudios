@@ -200,6 +200,10 @@ h5 {
   transform: translate(-50%, -50%);
   padding: 10px;
 }
+
+.error-page {
+  margin: 20px;
+}
 /* Info Page  */
 
 .info-div {
@@ -340,4 +344,6 @@ h5 {
   .square-image {
     margin: 2%;
   }
+
 }
+

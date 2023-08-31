@@ -31,6 +31,9 @@ export default function NavBar() {
             </p>
           </button>
           <div className="drop-content">
+          <Link className="nav-link" to={"urchinware"}>
+              Urchinware
+            </Link>
             <Link className="nav-link" to={"trashkiln"}>
               Trash Kiln
             </Link>

@@ -23,6 +23,9 @@ export default function MobileNavBar() {
               Projects
             </Link>
             <div className="nav-links">
+            <Link className="nav-link" to={"urchinware"} onClick={toggleOpen}>
+                Urchinware
+              </Link>
               <Link className="nav-link" to={"trashkiln"} onClick={toggleOpen}>
                 Trash Kiln
               </Link>

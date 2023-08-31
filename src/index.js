@@ -7,6 +7,7 @@ import LandingPage from "./Components/Pages/LandingPage";
 import Info from "./Components/Pages/Info";
 
 import Ceramics from "./Components/Pages/Ceramics";
+import Urchinware from "./Components/Pages/Urchinware";
 import OpenRoad from "./Components/Pages/OpenRoad";
 import TrashKiln from "./Components/Pages/TrashKiln";
 
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "ceramics",
         element: <Ceramics />,
+      },
+      {
+        path: "urchinware",
+        element: <Urchinware/>,
       },
       {
         path: "trashkiln",
