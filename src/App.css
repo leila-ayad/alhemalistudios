@@ -41,6 +41,11 @@
   width: 50%;
 }
 
+.project-text-container-wide {
+  margin: auto;
+  width: 70%;
+}
+
 .project-text {
   text-align: left;
   line-height: 2rem;

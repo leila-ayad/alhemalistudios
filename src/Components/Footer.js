@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { BsLinkedin, BsInstagram } from "react-icons/bs";
 
 export default function Footer() {

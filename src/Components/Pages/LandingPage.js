@@ -6,7 +6,7 @@ export default function LandingPage() {
       <div className="project-container">
         <img
           className="square-image"
-          src="https://live.staticflickr.com/65535/53155501134_22f366ebf6_z.jpg"
+          src="https://live.staticflickr.com/65535/53155501134_87199ee239_z.jpg"
           width="640"
           height="640"
           alt="A carafe, pour over and two mugs from the urchinware line"
