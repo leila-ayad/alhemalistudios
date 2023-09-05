@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+README - Al-Hemali Studios Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview
+This README provides essential information for the Al-Hemali Studios Personal Website hosted on GitHub Pages at alhemalistudios.com. This website showcases the work and portfolio of Leila Al-Hemali Ayad, a talented ceramic artist and programmer.
 
-## Available Scripts
+Table of Contents
+Project Description
+Features
+Usage
+Deployment
+Custom Domain
+Contact
 
-In the project directory, you can run:
+Project Description
+The Al-Hemali Studios Personal Website is a React-based website designed to showcase the artwork, ceramics, and creative endeavors of Leila Al-Hemali Ayad. The website also serves as a platform for Leila to share her journey as a ceramic artist and programmer with the world. 
 
-### `npm start`
+Features
+Portfolio: Display an extensive collection of Leila's ceramic artistry and programming projects.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Usage
+The Al-Hemali Studios Personal Website is designed to be user-friendly, allowing visitors to navigate through the portfolio.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Deployment
+The website is hosted on GitHub Pages. To deploy changes to the live website:
 
-### `npm test`
+Follow steps on this blog:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ https://blog.logrocket.com/deploying-react-apps-github-pages/
 
-### `npm run build`
+Access the live website at alhemalistudios.com.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Custom Domain
+The website is configured to use the custom domain alhemalistudios.com. 
+Contact
+If you have any questions, suggestions, or need assistance, please feel free to contact Leila Al-Hemali Ayad:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Email: leila.alhemali@gmail.com
+GitHub: https://github.com/leila-ayad
+Website: https://alhemalistudios.com
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for visiting the Al-Hemali Studios Personal Website!
