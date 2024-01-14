@@ -9,12 +9,13 @@ export default function MaterialsLibrary() {
           <br></br>
           This app is built with React and Node. You may make a user login and
           password to explore the full functionality of the app.
+
+          Note: Abstract Picnic Artist collective was absolved in late 2023.
           <br></br>
           <br></br>
           <a href="https://ap-materials-lib-fe.vercel.app/">Try it here</a>
           <br></br>
           <br></br>
-          *Note: This app is still under development.
         </p>
       </div>
       <img
