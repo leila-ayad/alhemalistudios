@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div className="social-media-container">
       <a
-        href={"https://www.linkedin.com/in/leila-alhemali-ayad/"}
+        href={"https://www.linkedin.com/in/leila-ayad/"}
         className="social-media-logo"
       >
         {" "}
