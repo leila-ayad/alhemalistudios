@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/www.alhemalistudios.com/static/css/main.21615d63.css",
-    "main.js": "/www.alhemalistudios.com/static/js/main.e0bea52d.js",
+    "main.js": "/www.alhemalistudios.com/static/js/main.d86974f8.js",
     "static/js/787.40e3a123.chunk.js": "/www.alhemalistudios.com/static/js/787.40e3a123.chunk.js",
     "index.html": "/www.alhemalistudios.com/index.html",
     "main.21615d63.css.map": "/www.alhemalistudios.com/static/css/main.21615d63.css.map",
-    "main.e0bea52d.js.map": "/www.alhemalistudios.com/static/js/main.e0bea52d.js.map",
+    "main.d86974f8.js.map": "/www.alhemalistudios.com/static/js/main.d86974f8.js.map",
     "787.40e3a123.chunk.js.map": "/www.alhemalistudios.com/static/js/787.40e3a123.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.21615d63.css",
-    "static/js/main.e0bea52d.js"
+    "static/js/main.d86974f8.js"
   ]
 }
