@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/alhemalistudios/static/css/main.21615d63.css",
-    "main.js": "/alhemalistudios/static/js/main.7a427f71.js",
-    "static/js/787.40e3a123.chunk.js": "/alhemalistudios/static/js/787.40e3a123.chunk.js",
-    "index.html": "/alhemalistudios/index.html",
-    "main.21615d63.css.map": "/alhemalistudios/static/css/main.21615d63.css.map",
-    "main.7a427f71.js.map": "/alhemalistudios/static/js/main.7a427f71.js.map",
-    "787.40e3a123.chunk.js.map": "/alhemalistudios/static/js/787.40e3a123.chunk.js.map"
+    "main.css": "/www.alhemalistudios.com/static/css/main.21615d63.css",
+    "main.js": "/www.alhemalistudios.com/static/js/main.e0bea52d.js",
+    "static/js/787.40e3a123.chunk.js": "/www.alhemalistudios.com/static/js/787.40e3a123.chunk.js",
+    "index.html": "/www.alhemalistudios.com/index.html",
+    "main.21615d63.css.map": "/www.alhemalistudios.com/static/css/main.21615d63.css.map",
+    "main.e0bea52d.js.map": "/www.alhemalistudios.com/static/js/main.e0bea52d.js.map",
+    "787.40e3a123.chunk.js.map": "/www.alhemalistudios.com/static/js/787.40e3a123.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.21615d63.css",
-    "static/js/main.7a427f71.js"
+    "static/js/main.e0bea52d.js"
   ]
 }
