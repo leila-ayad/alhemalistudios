@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.21615d63.css",
-    "main.js": "/static/js/main.1e9bc3ee.js",
-    "static/js/787.40e3a123.chunk.js": "/static/js/787.40e3a123.chunk.js",
-    "index.html": "/index.html",
-    "main.21615d63.css.map": "/static/css/main.21615d63.css.map",
-    "main.1e9bc3ee.js.map": "/static/js/main.1e9bc3ee.js.map",
-    "787.40e3a123.chunk.js.map": "/static/js/787.40e3a123.chunk.js.map"
+    "main.css": "/leila/static/css/main.21615d63.css",
+    "main.js": "/leila/static/js/main.1e306502.js",
+    "static/js/787.40e3a123.chunk.js": "/leila/static/js/787.40e3a123.chunk.js",
+    "index.html": "/leila/index.html",
+    "main.21615d63.css.map": "/leila/static/css/main.21615d63.css.map",
+    "main.1e306502.js.map": "/leila/static/js/main.1e306502.js.map",
+    "787.40e3a123.chunk.js.map": "/leila/static/js/787.40e3a123.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.21615d63.css",
-    "static/js/main.1e9bc3ee.js"
+    "static/js/main.1e306502.js"
   ]
 }
