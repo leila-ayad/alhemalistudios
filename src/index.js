@@ -20,12 +20,12 @@ import { createHashRouter, RouterProvider } from "react-router-dom"; // Updated 
 
 const router = createHashRouter([ // Updated: Switched to createHashRouter
   {
-    path: "/alhemalistudios",
+    path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/alhemalistudios",
+        path: "/",
         element: <LandingPage />
       },
       {
