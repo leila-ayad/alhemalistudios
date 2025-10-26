@@ -1,0 +1,178 @@
+/* === Theme Variables === */
+:root {
+  --bg-color: #c2ddec; /* light blue */
+  --text-color: #04475b; /* dark blue */
+  --accent-color: #fdc11b; /* golden */
+  --secondary-color: #f8a68a; /* pinky peach */
+  --highlight-color: #f0d3ba; /* creamy white */
+  --primary-color: #4f1b49; /* reddish purple */
+}
+
+[data-theme="dark"] {
+  --bg-color: #4f1b49; /* reddish purple */
+  --text-color: #f0d3ba; /* creamy white */
+  --accent-color: #fdc11b; /* golden */
+  --secondary-color: #f8a68a; /* pinky peach */
+  --highlight-color: #c2ddec; /* light blue */
+  --primary-color: #04475b; /* dark blue */
+}
+
+/* === Global Styles === */
+body {
+  margin: 0 auto;
+  font-family: "Helvetica", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  max-width: 66%;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* === Header & Footer === */
+header,
+footer {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] header,
+[data-theme="dark"] footer {
+  background-color: var(--accent-color); /* keep gold for dark mode */
+  color: var(--text-color);
+}
+
+/* === Buttons === */
+button {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* === Theme Toggle Button === */
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+#theme-toggle:hover {
+  background-color: var(--primary-color);
+  color: var(--highlight-color);
+}
+
+/* === Section Classes === */
+.section {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.section p,
+.section li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+/* === Links === */
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === Cards (Skills / Projects) === */
+.card {
+  background-color: var(--highlight-color);
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin: 1rem auto;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-color: var(--secondary-color);
+  color: var(--highlight-color);
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--secondary-color);
+}
+
+[data-theme="dark"] .card:hover {
+  background-color: var(--accent-color);
+  color: var(--highlight-color);
+}
+
+/* === This Site Section === */
+.this-site {
+  background-color: var(--highlight-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+}
+
+[data-theme="dark"] .this-site {
+  background-color: var(--secondary-color);
+  color: var(--highlight-color);
+}
+
+/* Left-aligned text for resume */
+.left-align {
+  text-align: left;
+  max-width: 800px;
+  margin: 1.5rem auto; /* less space than before */
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+
+/* Headings */
+.left-align h2 {
+  color: var(--primary-color);
+  margin-top: 1.5rem; /* space above each section */
+  margin-bottom: 0.8rem; /* space below heading */
+  font-size: 1.5rem;
+}
+
+.left-align h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+/* Lists */
+.left-align ul {
+  margin: 0.5rem 0 1rem 1.2rem; /* reduce spacing, keep indentation */
+}
+
+.left-align li {
+  margin-bottom: 0.4rem; /* smaller spacing between bullets */
+}
+
+/* Paragraphs */
+.left-align p {
+  margin: 0.4rem 0; /* tighter spacing */
+}

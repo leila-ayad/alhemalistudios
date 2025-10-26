@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leila A.</title>
+    <link rel="icon" type="image/x-icon" href="./images/icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Light/Dark Toggle -->
+    <button id="theme-toggle">Toggle Dark/Light Mode</button>
+
+    <!-- Hero / Intro -->
+    <header id="hero">
+      <h1>Hi, I’m Leila</h1>
+      <p>Building geospatial web tools for climate tech & GIS.</p>
+      <a href="resume.html"><button>View Resume</button></a>
+    </header>
+
+    <!-- About Me -->
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>
+        Hi! I’m Leila, a web developer with a passion for geospatial tech,
+        real-time visualization, and sustainable solutions. I enjoy designing
+        tools that help people understand the world around them. I work in tech
+        because the web is a powerful tool for communcating ideas. After my
+        family was freed from living under dictatorship in the 2012 Arab Spring,
+        I became interested in web technologies. After a few formative side
+        quests as a climate educator and ceramics artist, I turned my
+        professional attention to web development in 2020.
+      </p>
+    </section>
+
+    <!-- This Site -->
+    <section id="this-site">
+      <h2>About This Site</h2>
+      <p>
+        I believe in the web as a space where everyone is meant to contribute.
+        This site is a node process being served from a retired 2018 Mac Mini
+        running Ubuntu sitting on my desk. I poked a hole in my home Wi-Fi
+        network and use a cron job to keep DNS records up to date with GoDaddy.
+      </p>
+      <p>
+        The goal was to use as few out-of-the-box solutions as possible to get a
+        site live. It’s simple, but in a time of hosted pages and cloud compute,
+        it’s important to remember where it all started.
+      </p>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Visualizing Vector Layers in 3D with CesiumJS</h3>
+          <p>Projects coming soon</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Simtable Customer Resource Management Tools Suite</h3>
+          <p>Projects coming soon</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Browser Laser Tracking with WebRTC + CanvasAPI</h3>
+          <p>Projects coming soon</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Modeling Solar Spectra from MEERA-2</h3>
+          <p>Projects coming soon</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer>
+      <p>
+        Email:
+        <a href="mailto:leila.alhemali@gmail.com">leila.alhemali@gmail.com</a>
+      </p>
+      <p>
+        GitHub: <a href="https://github.com/leila-ayad">leila-ayad</a> |
+        LinkedIn: <a href="https://linkedin.com/in/leila-ayad">leila-ayad</a>
+      </p>
+    </footer>
+
+    <script>
+      const toggleButton = document.getElementById("theme-toggle");
+      toggleButton.addEventListener("click", () => {
+        if (document.documentElement.getAttribute("data-theme") === "dark") {
+          document.documentElement.removeAttribute("data-theme");
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      });
+    </script>
+  </body>
+</html>
