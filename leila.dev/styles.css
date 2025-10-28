@@ -103,12 +103,13 @@ a:hover {
 
 /* === Cards (Skills / Projects) === */
 .card {
+  display: flex;
+  flex-direction: row;
   background-color: var(--highlight-color);
   padding: 1.2rem;
   border-radius: 8px;
   margin: 1rem auto;
   transition: transform 0.2s ease, background-color 0.3s ease;
-  max-width: 300px;
 }
 
 .card:hover {
