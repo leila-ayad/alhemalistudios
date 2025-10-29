@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cesium Layers</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Cesium Layers</h1>
+    </header>
+
+    <main>
+      <section id="overview">
+        <h2>Overview</h2>
+        <p>
+          The Cesium-based Event Viewer is a platform that orients
+          two-dimensional imagery inside of Cesium's three-dimensional model of
+          the globe. This brings a new perspective to GIS work, where everyday,
+          civilian-captured imagery can be used to understand fire perimeters,
+          glacial retreat, flooding events, and more, without the seven-figure
+          overhead of collecting satellite imagery. This platform also brings in
+          raster and vector layers for further data analysis.
+        </p>
+      </section>
+
+      <section id="technologies">
+        <h2>Technologies / Tools</h2>
+        <ul>
+          <li>CesiumJS</li>
+          <li>STAC</li>
+          <li>Lit, Shoelace Components and Immer</li>
+        </ul>
+      </section>
+
+      <section id="my-role">
+        <h2>My role</h2>
+        <p>My work in Event Viewer has had two main threads:</p>
+        <ol>
+          <li>
+            Working on the main UI, which is built with Shoelace Components, Lit
+            (for lifecycle management), and Immer for immutable state updates. I
+            have built panels that display image/event information to edit/view
+            asset information, enable flyTo functionality, and write information
+            in a JSON structure to a WebDAV database.
+          </li>
+          <br />
+          <li>
+            Importing GeoJSON, KML, and GPX vector layers into Event Viewer.
+            CesiumJS natively supports vector layers, but draping functionality
+            is not yet built into the platform. To get the vectors to drape, I
+            created a custom fragment shader that finds the elevation of each
+            point on the globe (above the WGS84 Ellipsoid) from Cesium’s terrain
+            provider and applies that to the geometry primitive for the layer.
+            The Event Viewer platform creates STAC items for each layer added to
+            it. I utilized the flexibility of the STAC data structure to add a
+            renders object, which contains outline color, fill color, and
+            opacity properties to persist layer styling across applications.
+          </li>
+        </ol>
+      </section>
+
+      <section
+        id="images"
+        style="
+          width: 100vw;
+          position: relative;
+          left: 50%;
+          right: 50%;
+          margin-left: -50vw;
+          margin-right: -50vw;
+          box-sizing: border-box;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0 2rem;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            width: 100%;
+            overflow-x: hidden;
+          "
+        >
+          <figure style="flex: 1 1 45%; margin: 0">
+            <img
+              src="./images/layers_view.png"
+              alt="Short description of image 1"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 4px;
+              "
+            />
+            <figcaption style="padding: 0.5rem 0">
+              <strong>Event Viewer Interface</strong><br />
+              The main interface for Event Viewer shows oriented imagery in the
+              3-d globe. Note how the ridge in the photo aligns with that of the
+              globe. The left side panel is a series of custom web components
+              that display information from the database and are editable. The
+              top and bottom panel each have tabs that display data relevant to
+              the image, such as image pose or metadata.
+            </figcaption>
+          </figure>
+
+          <figure style="flex: 1 1 45%; margin: 0">
+            <img
+              src="./images/layers_UI.png"
+              alt="Short description of image 2"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 4px;
+              "
+            />
+            <figcaption style="padding: 0.5rem 0">
+              <strong>GeoJSON Layer in Cesium</strong><br />
+              The green layer is a fire perimeter provided by the Hellenic Fire
+              Service for a fire that burned on the island of Chios in Spring
+              2025. The vector layer is draped over the rolling hills, giving
+              information about exactly where the fire burned from many angles.
+              The left panel is showing the "Layer Panel", which gives the user
+              ability to edit metadata and layer styling.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
