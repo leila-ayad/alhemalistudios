@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM Tools</title>
+    <link rel="icon" type="image/x-icon" href="./images/icon.png" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Simtable Customer Resource Management Tools Suite</h1>
+    </header>
+
+    <main>
+      <section id="overview">
+        <h2>Overview</h2>
+        <p>
+          This suite of CRM tools was built to manage quote requests, customer
+          accounts and subscription renewals. As a company of eight people,
+          individual time and focus matters a lot. Before this tool suite, each
+          quote that came in was a custom request, that required atleast an hour
+          of time to put together. By creating the automated quote tool, I
+          standardized and automated the quote process saving, by the COO's
+          estimate, 30 hours per month. The quote tool feeds into our legacy CRM
+          database on Zendesk and writes new lead information to Firebase RTDB,
+          as we prepare to migrate all of our customer data in JSON hosted on a
+          WebDAV server.
+          <br /><br />
+          Next, I built a relatively simple CRM Portal for our COO to login to
+          and view customer data. This portal will be developed further as the
+          company expands. It currently has a dashboard and subscriptions page,
+          where we can go to see all of the active Simtable subscriptions
+          ordered by expiration date. It is connected to our Acequia WebDAV
+          Database to fetch/edit account information (see below for more info on
+          Acequia).
+          <br /><br />
+          Finally, the subscription renewal tool allows admins in the CRM
+          platform to create custom carts (to support our varied subscription
+          and pricing models) for customers. The Simtable software moved to the
+          SASS model in 2019 but tracking and billing for subscription renewals
+          has been a manual process, with poorly organized account data. For
+          this project, I sifted through years of purchasing and customer data
+          to create a cohesive dataset of existing accounts and their
+          subscription type/length. This project has the potential to collect
+          150k in unclaimed revenue from subscriptions lapsing without our
+          account's manager noticing. The custom carts display pricing and
+          subscription length options. Customers are prompted to update their
+          contact information. Finally, they commit to a payment method (Stripe,
+          Check, or Bank ACH) and are given instructions on how to check out
+          with that payment type.
+        </p>
+      </section>
+
+      <section id="technologies">
+        <h2>Technologies / Tools</h2>
+        <p>Quote Tool</p>
+        <ul>
+          <li>Firebase Functions with Firestore/Realtime Database</li>
+          <li>Zendesk Integration</li>
+          <li>Vanilla JS Iframe embedded in Wordpress Site</li>
+          <li>PDFMake + nodemailer</li>
+        </ul>
+        <p>Subscription Renewal Tool</p>
+        <ul>
+          <li>Firebase Functions</li>
+          <li>Stripe Integration</li>
+          <li>Custom setState/subscribe functions with immer.js</li>
+          <li>Lit and Shoelace (for CRM portal)</li>
+          <li>JSON Structured WebDAV Backend</li>
+        </ul>
+      </section>
+
+      <section id="my-role">
+        <h2>My role</h2>
+        <p>
+          I have been a solo developer on these CRM projects. I am responsible
+          for the work outlined in the Overview sections. In addition to that
+          information, there are a few architectural pieces I am proud of to
+          note:
+        </p>
+        <ol>
+          <li>
+            The subscription renewal tool is reliant on the admin platform I
+            built. The admin platform is among the first apps Simtable hosted
+            with our Acequia technology. Acequia allows us to host apps on our
+            own server and make authenticated requests (JWTS) to other Acequia
+            Nodes. A key player in Acequia is WebDAV, which has a defined
+            structure for PUT requests, making it a great choice for
+            decentralized architecture. WebDAV works well with JSON, so we
+            organized our customer accounts into a series of JSON files in their
+            respective directories. The UI for the CRM portal is also hosted on
+            the WebDAV server.
+          </li>
+          <br />
+          <li>
+            For this UI, I used Lit Custom Components with Shoelace Components.
+            These solutions greatly decreased development time. I used immer.js
+            to manage immutable state updates, registering listeners to state
+            objects and subscribing to changes on those objects in the
+            components which consume that piece of state. This brings quick,
+            reactive state management in an alternative, framework-less web app.
+          </li>
+        </ol>
+      </section>
+
+      <section
+        id="images"
+        style="
+          width: 100vw;
+          position: relative;
+          left: 50%;
+          right: 50%;
+          margin-left: -50vw;
+          margin-right: -50vw;
+          box-sizing: border-box;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0 2rem;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            width: 100%;
+            overflow-x: hidden;
+          "
+        >
+          <figure style="flex: 1 1 45%; margin: 0">
+            <img
+              src="./images/quote_tool.png"
+              alt="Short description of image 1"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 4px;
+              "
+            />
+            <figcaption style="padding: 0.5rem 0">
+              <strong>Quote Tool</strong><br />
+              You can try this tool on
+              <a
+                href="https://www.simtable.com/create-quote/"
+                style="text-decoration: underline"
+                >Simtable's Website</a
+              >. The tool has three stages to configure a quote, and returns a
+              PDF Quote at the end, that can be downloaded from the interface
+              and will be delivered via email.
+            </figcaption>
+          </figure>
+
+          <figure style="flex: 1 1 45%; margin: 0">
+            <img
+              src="./images/subscription_tool.png"
+              alt="Short description of image 2"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 4px;
+              "
+            />
+            <figcaption style="padding: 0.5rem 0">
+              <strong>Subscription Renewal Tool</strong><br />
+              The first frame of the subscription renewal tool shows a table
+              with selectable columns for subscription package. The tax
+              percentage is configured in the admin portal and added to the
+              total cost. Each cart get a custom URL, that displays customer
+              information and, upon completion of check out, will return to a
+              "Cart Closed" screen if the URL is navigated to again.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
