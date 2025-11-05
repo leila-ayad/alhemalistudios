@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spectral Modeling</title>
+    <link rel="icon" type="image/x-icon" href="./images/icon.png" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Spectral Modeling with MERRA-2 (UbiSMART)</h1>
+    </header>
+
+    <main>
+      <section id="overview">
+        <h2>Overview</h2>
+        <p>
+          This web app was developed to model the effectiveness of UbiGro - an
+          alternative greenhouse covering that shifts light from the blue part
+          of the solar spectrum to the red, increasing the type of light that
+          plants use to grow. The app uses atmospheric parameters (AOD, Water
+          Vapor, ATM Pressure, Ozone & Albedo) from NASA's MERRA-2 dataset to
+          model cloudless solar irradiance for a selected location on the globe.
+          It then applies a filter, calculating the shift from red to blue
+          light, while considering the impact the type of greenhouse a customer
+          uses will have on the product's performance.
+          <br></br>
+          The user interface has a customer select their location on a map, then fills out other relevant information (crop type, greenhouse information), capturing data for potential customers.
+          The next page displays results, specially calculated for each customer. They get a "score" and bar graph to compare with how the product performs in locations with pilot programs. They also get a seasonal solar spectra graph which shows a decrease in light in the blue wavelengths and increase in red wavelengths by season.
+        </p>
+      </section>
+
+      <section id="technologies">
+        <h2>Technologies / Tools</h2>
+
+        <ul>
+          <li>NetCDF, Pandas, Python</li>
+          <li>Flask</li>
+          <li>ChartJS, Leaflet, React</li>
+          <li>Vercel + AWS EBS Instance</li>
+        </ul>
+      </section>
+
+      <section id="my-role">
+        <h2>My role</h2>
+        <p>
+          For this project, I inherited python code that read NetCDF files and ran the code locally. I built a flask API, refactored the python code to ingest user input, built a react UI with interactive charts and launched the tool on the web with vercel and AWS Elastic Beanstalk. This was the first web app I built on my own! If I were to revisit the project there are a few optimizations I would make. The first being that MERRA-2 was not available on S3 in 2021. I would change the backend to access the data remotely, so the app could always use the latest data and stop hosting the files on the server. I also would no longer use React! It was overkill for a simple app like this.
+      </p>
+      </section>
+
+      <section
+        id="images"
+        style="
+          width: 100vw;
+          position: relative;
+          left: 50%;
+          right: 50%;
+          margin-left: -50vw;
+          margin-right: -50vw;
+          box-sizing: border-box;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0 2rem;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            width: 100%;
+            overflow-x: hidden;
+          "
+        >
+          <figure style="flex: 1 1 45%; margin: 0">
+            <img
+              src="./images/ubismart-top.png"
+              alt="Short description of image 1"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 4px;
+              "
+            />
+            <figcaption style="padding: 0.5rem 0">
+              <strong>Boost Score + Bar Graph</strong><br />
+              The first part of the UI shows the user how their location compares to other locations. The "Boost Score", shows the percentage of blue light will be converted to red. 
+            </figcaption>
+          </figure>
+
+          <figure style="flex: 1 1 45%; margin: 0">
+            <img
+              src="./images/ubismart-bottom.png"
+              alt="Short description of image 2"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 4px;
+              "
+            />
+            <figcaption style="padding: 0.5rem 0">
+              <strong>Expected Sunlight Change</strong><br />
+              The second graph shows how sunlight will change across seasons with UbiGro installed in a greenhouse. The dip below zero for 400nm-500nm shows blue light being removed from the spectrum. The bump on the graph between 550nm-700nm is the increased red light. 
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
