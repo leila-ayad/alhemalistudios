@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera Calibrator</title>
+    <link rel="icon" type="image/x-icon" href="./images/icon.png" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Camera Calibrator</h1>
+    </header>
+
+    <main>
+      <section id="overview">
+        <h2>Overview</h2>
+        <p>
+          The AnySurface Camera Calibrator is the user interface for Simtable’s AnySurface technology. AnySurface generates a correspondence map between a camera and a projector, enabling browser events initiated by a laser pointer. This tool was built for the Simtable—a digital, interactive sandtable with a browser-based UI that can be controlled using a laser pointer.
+          <br /><br />
+         The calibrator consists of three primary screens that guide users through configuring camera settings required to generate an accurate correspondence map and enable reliable laser tracking. While the underlying techniques are relatively simple machine vision, the impact is significant: the results of this work allow a new generation of Simtable to ship with a standard webcam instead of an expensive machine-vision camera. This dramatically reduces hardware costs, simplifies setup, and opens new markets for the company to explore in 2026.
+          <br /><br />
+          This project required deep work with the Media Capture API, including creating video streams and dynamically adjusting camera constraints. Because the goal was to support any webcam, I had to account for inconsistent terminology and behavior across camera manufacturers and the UVC Video Controller specification. I also studied camera intrinsics and extrinsics to better understand how cameras model the world and how their physical placement affects calibration.
+          <br /><br />
+         I additionally worked extensively with the Canvas API to build real-time interfaces that provide immediate visual feedback on live camera streams. This included manipulating raw image data from the live video stream to highlight pixels exceeding brightness thresholds, critical for laser detection. To keep performance responsive, I throttled requestAnimationFrame() calls in alignment with the browser’s render cycle, limiting CPU overhead. I also built a dynamic histogram that computes pixel brightness in real time and uses linear interpolation to smooth animations between frames—giving users fast, intuitive feedback while processing live camera data in the browse
+        </p>
+      </section>
+
+      <section id="technologies">
+        <h2>Technologies / Tools</h2>
+        <ul>
+          <li>Javascript Custom Web Component integrated in AngularJS</li>
+          <li>MediaStream API and WebRTC</li>
+          <li>Dynamic rendering with requestAnimationFrame() and Canvas API</li>
+        </ul>
+      </section>
+
+      <section id="my-role">
+        <h2>My role</h2>
+        <p>
+          I have been a solo developer on the camera calibrator component. I am
+          responsible for the work outlined in the Overview sections. In
+          addition to that information, there are a few architectural pieces I
+          am proud of to note:
+        </p>
+        <ol>
+          <li>
+           This component can be integrated into any web application, regardless of framework, because it is implemented as a plain JavaScript custom web component. It has no external dependencies and requires no build step. To initialize the component, the consuming application passes a camera configuration object as an attribute, which the web component can read from and update directly.
+          </li>
+          <br />
+          <li>
+          Incorporating this component into our main product, AnyHazard, resulted in laser tracking that is roughly 10× faster. Previously, the system relied on a Python-based laser server and a dedicated machine vision camera. With this component, all laser tracking now runs in a browser worker thread, eliminating server overhead and moving real-time vision processing directly into the client environment.
+          </li>
+        </ol>
+      </section>
+
+      <section
+        id="images"
+        style="
+          width: 100vw;
+          position: relative;
+          left: 50%;
+          right: 50%;
+          margin-left: -50vw;
+          margin-right: -50vw;
+          box-sizing: border-box;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0 2rem;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            width: 100%;
+            overflow-x: hidden;
+          "
+        >
+          <figure style="flex: 1 1 45%; margin: 0">
+            <img
+              src="./images/laser_1.png"
+              alt="Short description of image 1"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 4px;
+              "
+            />
+            <figcaption style="padding: 0.5rem 0">
+              <strong>Laser Calibrator Interface</strong><br />
+This interface visualizes a poorly calibrated camera for laser tracking. Using getImageData() from the Canvas API, I access pixel data for each frame of the camera stream and calculate brightness by iterating through the RGBA values. Pixels exceeding the laser brightness threshold are highlighted in red on both the video stream and the histogram, giving users clear feedback to reduce gain or exposure time and limit incoming light. In this example, the interface indicates a detected “laser” even though no laser is being pointed at the projection—the green brightest-point line on the histogram also registers above the threshold, signaling the calibration needs adjustment.
+            </figcaption>
+          </figure>
+
+          <figure style="flex: 1 1 45%; margin: 0">
+            <img
+              src="./images/laser_3.png"
+              alt="Short description of image 3"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 4px;
+              "
+            />
+            <figcaption style="padding: 0.5rem 0">
+              <strong>Laser Calibrator Interface</strong><br />
+This image shows a properly calibrated camera for laser tracking. Compared to the image on the left, all pixels in the histogram remain below the brightness (laser) threshold, and none are highlighted in red in the camera stream. A laser is pointed at the projection, and it is correctly identified by the software—the green circle marks the brightest point, confirming that the laser is being tracked accurately.
+            </figcaption>
+          </figure>
+
+          <figure style="flex: 1 1 45%; margin: 0">
+            <img
+              src="./images/laser_2.png"
+              alt="Short description of image 2"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 4px;
+              "
+            />
+            <figcaption style="padding: 0.5rem 0">
+              <strong>Scanning Settings Interface</strong><br />
+To enable “click” events with a laser pointer, a correspondence map between the projector and camera views is required. This interface helps users identify the active area of the projection. Our approach is simple: a black-and-white checkerboard pattern gradually alternates between black and white. The camera captures each frame, and any pixel where the difference between frames exceeds a threshold is considered part of the active projection area. AnySurface then uses a Gray Code Scan to determine the precise mapping of each pixel in camera-projector space, which also alternates between black and white. This process ensures the camera receives the right amount of light to reliably distinguish between black and white pixels, critical for an accurate camera-projector correspondence map.
+            </figcaption>
+          </figure>
+
+          <figure style="flex: 1 1 45%; margin: 0">
+            <img
+              src="./images/laser_4.png"
+              alt="Short description of image 2"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 4px;
+              "
+            />
+            <figcaption style="padding: 0.5rem 0">
+              <strong>Scanning Settings Interface</strong><br />
+This image shows a poorly calibrated scan. The exposure time is too high, causing the image to be blown out. As a result, the image processing cannot detect meaningful differences between the black and white squares on the checkerboard, producing thick white lines between the squares. 
+          </figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
